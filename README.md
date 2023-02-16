@@ -50,30 +50,34 @@ We are creating a 3D cube using Three.js. It's like making a toy block out of di
 We are creating a 3D cube using Three.js. It's like making a toy block out of digital materials. We are giving the cube a green color.
 
 
-`const geometry = new THREE.BoxGeometry(); // It act as a toy shape
+```javascript
+const geometry = new THREE.BoxGeometry(); // It act as a toy shape
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Toy material
 const cube = new THREE.Mesh(geometry, material); // Toy
 scene.add(cube); // Adding toy to the scene
-`
+```
 
 ##### Position the camera
 We have a camera that can see the 3D cube we created earlier. We are positioning the camera in such a way that it's 5 units away from the cube. It's like taking a picture of the cube from a distance.
 
-`camera.position.z = 5;`
+```javascript
+camera.position.z = 5;
+```
 
 # 0003
 
 ##### Render the scene
 
 
-`function animate() {
+```javascript 
+function animate() {
 requestAnimationFrame(animate);
 cube.rotation.x += 0.01;
 cube.rotation.y += 0.01;
 renderer.render(scene, camera);
 }
 animate(); //Without calling animate function you will see nothing
-`
+```
 
 We want to show the 3D cube on a computer screen. To do that, we have to create a virtual world where the cube exists. We call this world a "scene". Then, we have to use a special program called a "renderer" to show the scene on the computer screen. 
 

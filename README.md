@@ -29,8 +29,9 @@ Three js is an javaScript library to build modern 3D application in the Web Brow
 
 You can move around to see different objects from different angles, and the Camera in Three.js allows you to do the same.
 
-**Finally, a Renderer in Three.js is like a painter who paints what you see in front of you.** Just like how a painter puts different colors and textures on a canvas to create a painting. > 
-A Renderer in Three.js takes the objects in the Scene and renders them on a screen or canvas.
+**Finally, a Renderer in Three.js is like a painter who paints what you see in front of you.** Just like how a painter puts different colors and textures on a canvas to create a painting. 
+ 
+> A Renderer in Three.js takes the objects in the Scene and renders them on a screen or canvas.
 
 It combines the position of the Camera with the objects in the Scene to create an image that you can see on your screen.
 
@@ -44,23 +45,28 @@ Explanation of the code that a seven-year-old can understand:
 
 We are creating a 3D cube using Three.js. It's like making a toy block out of digital materials. We are giving the cube a green color.
 
-`// Create a new cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+##### Create a new cube
+
+We are creating a 3D cube using Three.js. It's like making a toy block out of digital materials. We are giving the cube a green color.
+
+
+`const geometry = new THREE.BoxGeometry(); // It act as a toy shape
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Toy material
+const cube = new THREE.Mesh(geometry, material); // Toy
+scene.add(cube); // Adding toy to the scene
 `
 
+##### Position the camera
 We have a camera that can see the 3D cube we created earlier. We are positioning the camera in such a way that it's 5 units away from the cube. It's like taking a picture of the cube from a distance.
 
-`// Position the camera
-camera.position.z = 5;`
+`camera.position.z = 5;`
 
 # 0003
 
-`// Render the scene
+##### Render the scene
 
-function animate() {
+
+`function animate() {
 requestAnimationFrame(animate);
 cube.rotation.x += 0.01;
 cube.rotation.y += 0.01;
@@ -68,6 +74,7 @@ renderer.render(scene, camera);
 }
 animate(); //Without calling animate function you will see nothing
 `
+
 We want to show the 3D cube on a computer screen. To do that, we have to create a virtual world where the cube exists. We call this world a "scene". Then, we have to use a special program called a "renderer" to show the scene on the computer screen. 
 
 The renderer takes a picture of the scene from the camera's point of view and shows it on the screen. We are also making the cube spin by a little bit each time. This makes the cube look like it's moving. We are doing this again and again, and it makes the cube look like it's alive!

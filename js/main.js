@@ -1,29 +1,22 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.134.0/build/three.module.js';
+import { createCamera } from './components/camera.js';
 
-const container = document.querySelector('#scene-container'); // Import from html
+const container = document.querySelector('#scene-container'); 
 console.log(container)
 
-const scene = new THREE.Scene(); // Adding scene
+const scene = new THREE.Scene(); 
 
-scene.background = new THREE.Color('#032e2e'); // We Change the background 
+scene.background = new THREE.Color('#032e2e'); 
 
-
-const camera = new THREE.PerspectiveCamera( 
-  40,
-  window.innerWidth / window.innerHeight  ,
-  0.1,
-  100
-); // #0004
+const camera = createCamera() // # 0005
 
 
-const renderer = new THREE.WebGLRenderer();  // # 0001
+const renderer = new THREE.WebGLRenderer();  
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// #0002
-const geometry = new THREE.BoxGeometry(0.9, 1, 1); //Play with geometry
 
-// const material = new THREE.MeshBasicMaterial(); //By default color is white but this comment right on README.md
+const geometry = new THREE.BoxGeometry(0.9, 1, 1); 
 
 const material = new THREE.MeshBasicMaterial({color:'pink'}); // MeshBasicMaterial did'nt need any light
 

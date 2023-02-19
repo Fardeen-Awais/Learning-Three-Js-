@@ -9,8 +9,7 @@ Three js is an javaScript library to build modern 3D application in the Web Brow
 # Table of content
 
 Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-Three-Js-/commit/6f6a7e2)
-
-
+PerspectiveCamera with Real Life Example :  [b363e14](https://github.com/Fardeen-Awais/Learning-Three-Js-/commit/b363e14)
 
 # Comment Reference 
 
@@ -18,7 +17,7 @@ Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-
 
 ### Let's Explain PerspectiveCamera
 
-**" Imagine you're standing on the side of a long, straight road that stretches off into the distance.
+**"Imagine you're standing on the side of a long, straight road that stretches off into the distance.
 As you look down the road, you notice that the road seems to get smaller and smaller the farther away it gets."**
 
 This is because of a **phenomenon called perspective.** Objects that are farther away appear smaller than objects that are closer to you.

@@ -16,7 +16,7 @@ Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-
 
 ## #0004:
 
-lets **explain perpective camera** further.
+lets **explain PerspectiveCamera ** further.
 
 Imagine you're standing on the side of a long, straight road that stretches off into the distance.
 

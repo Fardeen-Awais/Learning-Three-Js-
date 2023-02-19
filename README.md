@@ -16,13 +16,12 @@ Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-
 
 ## #0004:
 
-lets **explain PerspectiveCamera ** further.
+### Let's Explain PerspectiveCamera
 
-Imagine you're standing on the side of a long, straight road that stretches off into the distance.
+**" Imagine you're standing on the side of a long, straight road that stretches off into the distance.
+As you look down the road, you notice that the road seems to get smaller and smaller the farther away it gets."**
 
-As you look down the road, you notice that the road seems to get smaller and smaller the farther away it gets.
-
-This is because of a phenomenon called perspective. Objects that are farther away appear smaller than objects that are closer to you.
+This is because of a **phenomenon called perspective.** Objects that are farther away appear smaller than objects that are closer to you.
 
 A perspective camera in Three.js works in a similar way. It simulates the way our eyes see the world, by making objects that are farther away appear smaller. This creates a sense of depth and distance in the 3D scene.
 

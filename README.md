@@ -12,32 +12,53 @@ Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-
 
 PerspectiveCamera with Real Life Example :  [b363e14](https://github.com/Fardeen-Awais/Learning-Three-Js-/commit/b363e14)
 
+
+# Overview:
+
+In the previous commit, we ignore the file structure. But now we can handle our file and components with function based components. 
+
+You can see we have three files import from the folder name 'components'. Each file return a function. 
+
+We just transfer the our different functionality into the different file. 
+
+We seperately now import scene, camera and renderer from different files and can handle each of them in seperately.
+
+## Benifits of File-Structure: 
+
+1. Better Code
+2. Improves readibility
+3. Helps in Debugging
+4. Easier to maintain
+
+A lot of frameworks help you to give the the file-structure. Like Nextjs and Angular.
+
+
 # Comment Reference 
 
-## #0004:
 
-### Let's Explain PerspectiveCamera
+## #0005:
 
-**"Imagine you're standing on the side of a long, straight road that stretches off into the distance.
-As you look down the road, you notice that the road seems to get smaller and smaller the farther away it gets."**
+First we import all the function from different components.
 
-This is because of a **phenomenon called perspective.** Objects that are farther away appear smaller than objects that are closer to you.
+```javascript
+import { createCamera } from './components/camera.js'; import { createRender } from './components/render.js'; import { createScene } from './components/scene.js'; 
+```
+After that we call each function with declaring their variable.
 
-A perspective camera in Three.js works in a similar way. It simulates the way our eyes see the world, by making objects that are farther away appear smaller. This creates a sense of depth and distance in the 3D scene.
+**There are two benifits of doing this:**
 
-When you create a new perspective camera in Three.js, you can specify a few different settings that control how the camera sees the scene. These settings include:
+1. First we import our function in one line
+2. Second we can further console each of the functions.
 
-**Field of view:** This is the angle of the camera lens. A wider angle will show more of the scene, but objects will appear smaller. A narrower angle will show less of the scene, but objects will appear larger.
+```javascript
+const [scene, camera, renderer] = [createScene(), createCamera(), createRender()]; 
+```
 
-**Aspect ratio:** This is the ratio of the camera's width to its height. It should match the aspect ratio of the window or canvas where you're displaying the scene.
+```javascript
+console.log({scene,camera,renderer})
+```
 
-**Near and far planes:** These are the distances from the camera where objects will start and stop being rendered. Objects that are too close or too far away won't be visible in the scene.
-
-Using these settings, you can create a perspective camera that makes your 3D scene appear more realistic and immersive, just like how our eyes see the world.
-
-
----------------------------------------
-
-Try to fun by changing the value it help you to acknowledge you better how things are working.
-
-In the next commit we will make our file structure more better. I have give you an hardcore idea in the code. 
+You can see the object in the console after that:
+```console
+Object { scene: {…}, camera: {…}, renderer: {…} } 
+```

@@ -1,30 +1,23 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.134.0/build/three.module.js';
-import { createCamera } from './components/camera.js';
+import * as THREE from 'https://cdn.skypack.dev/three@0.134.0/build/three.module.js'; 
 
-const container = document.querySelector('#scene-container'); 
-console.log(container)
-
-const scene = new THREE.Scene(); 
-
-scene.background = new THREE.Color('#032e2e'); 
-
-const camera = createCamera() // # 0005
+import { createCamera } from './components/camera.js'; import { createRender } from './components/render.js'; import { createScene } from './components/scene.js'; 
 
 
-const renderer = new THREE.WebGLRenderer();  
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+const [scene, camera, renderer] = [createScene(), createCamera(), createRender()]; // #0005
+
+console.log({scene,camera,renderer})
 
 
+// Rest of the code will be same:
 const geometry = new THREE.BoxGeometry(0.9, 1, 1); 
 
-const material = new THREE.MeshBasicMaterial({color:'pink'}); // MeshBasicMaterial did'nt need any light
+const material = new THREE.MeshBasicMaterial({color:'green'}); // MeshBasicMaterial did'nt need any light
 
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube); // Treat it as a Toy
 
-// camera.position.set(0, 1, 2); // We can play with position as well
-camera.position.z = 5;
+camera.position.set(-0.2, -0.1, 5); // We can play with position as well
+// camera.position.z = 5;
 
 
 function animate() {   // #0003

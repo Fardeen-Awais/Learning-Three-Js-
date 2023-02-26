@@ -7,7 +7,7 @@ import {
 function Createcube() {
 
   const geometry = new BoxGeometry(0.9, 1, 1);
-  const material = new MeshStandardMaterial({ color: "" });
+  const material = new MeshStandardMaterial({ color: "" }); //#0008
   const cube = new Mesh(geometry, material);
   
   return cube;

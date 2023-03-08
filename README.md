@@ -1,8 +1,3 @@
-# MeshStandardMaterial with directional light
-
-
-In the this commit we had learn how to use meshStandardMaterial and emmit light on it to see 3D Effect in cube.
-
 # Table of content
 
 Get Started with Three js - [6f6a7e2](https://github.com/Fardeen-Awais/Learning-Three-Js-/commit/6f6a7e2)
@@ -14,10 +9,18 @@ File Structure :  [6092ddf](https://github.com/Fardeen-Awais/Learning-Three-Js-/
 
 # Comment Reference 
 
+In this commit, we had learn more about lightening in three.js. We add ambient light and Hemisphere Light in the light.js
 
-## Orbit Control : 
+Change the return variable and see what each light actually does to the real time cube.
 
-This sandbox code helps you to make a clear concept what is orbit control:
+## HemisphereLight
 
-[Orbit Control](https://codesandbox.io/s/04-threejs-orbitcontrols-forked-17dhe9)
+A light source positioned directly above the scene, with color fading from the sky color to the ground color.
 
+This light cannot be used to cast shadows.
+
+## AmbientLight
+
+This light globally illuminates all objects in the scene equally.
+
+This light cannot be used to cast shadows as it does not have a direction.

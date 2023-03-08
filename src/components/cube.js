@@ -25,7 +25,7 @@ function createMaterial() {
 
 function Createcube() {
 
-  const geometry = new BoxGeometry(0.3, 0.6, 0.5);
+  const geometry = new BoxGeometry(1, 1, 1);
   const material = createMaterial()
   const cube = new Mesh(geometry, material);
   

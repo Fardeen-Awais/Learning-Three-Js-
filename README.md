@@ -15,41 +15,9 @@ File Structure :  [6092ddf](https://github.com/Fardeen-Awais/Learning-Three-Js-/
 # Comment Reference 
 
 
-## #0008:
+## Orbit Control : 
 
-meshBasicMaterial doesn't look like 3D. So now we are using meshStandardMaterial. There almost no significant change in syntax you can you meshStandarMaterial which allow you to **use lights in 3D world**:
+This sandbox code helps you to make a clear concept what is orbit control:
 
- ```javaScript
- const geometry = new BoxGeometry(0.9, 1, 1);
-  const material = new MeshStandardMaterial({ color: "" }); // I did'nt add any color to show you how light works
-  const cube = new Mesh(geometry, material);
-  
-  return cube;
- ```
+[Orbit Control](https://codesandbox.io/s/04-threejs-orbitcontrols-forked-17dhe9)
 
-## #0009:
-
-### DirectionalLight:
-
-
-
-```javaScript
-const light = new DirectionalLight('white', 8); 
-```
-
-### Light Position:
-
-**Move the light right, up, and towards us**
-
- ```javaScript
- light.position.set(0, 0, 0); //* No light
- light.position.set(1, 0, 0); //*Light emmit from right side
- light.position.set(0, 1, 0); //* You can imagine a torch emmit light from upside of cube
- light.position.set(0, 0, 1); //* You can imagine you emmit torch directly at the middle of the cube respected to your self. //TODO: Quick hint: try to minus the value and see result
- ```
-
- ShortHand Property:
-
-```javaScript
-light.position.set(2,2,0) 
-```
